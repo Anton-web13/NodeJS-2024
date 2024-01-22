@@ -1,0 +1,10 @@
+{
+  "name": "NodeJS-2024",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {},
+  "scripts": {
+    "start": "set uv_threadpool_size=4 & node stack.js",
+    "start1": "set uv_threadpool_size=1 & node stack1.js"
+ }
+}

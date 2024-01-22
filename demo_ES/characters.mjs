@@ -11,3 +11,4 @@ export default function log (person) {
     console.log("WOW")
 }
 
++
