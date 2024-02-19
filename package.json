@@ -6,5 +6,8 @@
   "scripts": {
     "start": "set uv_threadpool_size=4 & node stack.js",
     "start1": "set uv_threadpool_size=1 & node stack1.js"
- }
+  },
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
 }
