@@ -8,6 +8,7 @@ const { Worker } = require('worker_threads');
 
 
 const compute = (array) => {
+    console.log('app_worker ARRAY', array);
     return new Promise((resolve, reject) => {
         const worker = new Worker('./worker.js', {
             workerData: {
@@ -17,6 +18,7 @@ const compute = (array) => {
 
         worker.on('message', (msg) => {
             console.log(worker.threadId);
+            console.log('sergfserg', msg)
             resolve(msg);
         });
 
@@ -41,7 +43,7 @@ const main =  async() => {
             compute([25, 20, 19, 48, 30, 50]),
         ]);
     
-        console.log(result);
+        console.log('result', result);
     
         performance.mark('end');
         performance.measure('main', 'start', 'end');

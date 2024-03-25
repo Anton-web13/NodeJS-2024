@@ -19,7 +19,16 @@ const compute = ({ array }) => {
         arr.push(i * i);
     };
 
+    console.log('worker ARRAY', array);
+
     return array.map(ell => factiorial(ell))
 };
 
+// const resultOfCompute = compute();
+
+// console.log('resultOfCompute ARRAY', resultOfCompute);
+
+console.log('worker WORKERDATA', workerData);
+
 parentPort.postMessage(compute(workerData));
+// console.log("parentPort.postMessage", parentPort.postMessage(compute(workerData)));

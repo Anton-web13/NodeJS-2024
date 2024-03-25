@@ -4,4 +4,8 @@ module.exports = function factiorial (n) {
     }
 
     return factiorial(n - 1) * n;
+    // const summOfFactorial = [];
+    // summOfFactorial.push(factiorial(n - 1) * n);
+
+    // return summOfFactorial;
 };
